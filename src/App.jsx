@@ -5,12 +5,15 @@ import SignIn from "./pages/SignIn"
 import SignUp from "./pages/SignUp"
 import About from "./pages/About"
 import Profile from "./pages/Profile"
+import Header from "./components/Header"
 
 const App = () => {
   return (
-    <h1 className=" bg-blue-400 text-white text-center font-extrabold text-3xl   ">
+    <div>
     <BrowserRouter>
+    <Header/>
       <Routes>
+
         <Route path="/" element={<Home/>}/>
         <Route path="/sign-in" element={<SignIn/>}/>
         <Route path="/sign-up" element={<SignUp/>}/>
@@ -19,7 +22,7 @@ const App = () => {
       </Routes>
     </BrowserRouter>
      
-    </h1>
+    </div>
   )
 }
 
